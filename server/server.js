@@ -25,4 +25,5 @@ app.use("/api/tickets", tickets);
 const users = require("./users.js");
 app.use("/api/users", users);
 
-app.listen(3001, () => console.log('Server listening on port 3001!'));
+let port = 3001;
+app.listen(port, () => console.log("Server listening on port " + port + "!"));
