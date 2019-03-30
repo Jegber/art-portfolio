@@ -108,7 +108,7 @@ router.post('/', async (req, res) => {
 
 // login
 async function login(user, res) {
-    console.log("login");
+    console.log("login user: " + user + " res: " + res);
     let token = auth.generateToken({
         id: user._id
     }, "24h");
