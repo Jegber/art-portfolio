@@ -33,7 +33,11 @@
 
                         <div class="card">
                             <article class="card-body">
+                                <button @click="closeForm" type="button" class="close float-left" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                                 <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+
                                 <hr>
                                 <p v-if="error" class="text-danger text-center error">{{error}}</p>
                                 <form>
@@ -68,28 +72,30 @@
         </transition>
 
 
-        <!--<div class="content">
-            <form @submit.prevent="addTicket">
-                <input v-model="addedName" placeholder="Name"></p>
-                <textarea v-model="addedProblem"></textarea>
-                <br />
-                <button type="submit">Submit</button>
-            </form>
 
-            <h3>Tickets</h3>
-            <div v-for="ticket in tickets">
-                <hr>
-                <div class="ticket">
-                    <div class="problem">
-                        <p>{{ticket.problem}}</p>
-                        <p><i>~ {{ticket.name}}</i></p>
-                    </div>
-                    <div class="delete">
-                        <button @click="deleteTicket(ticket)" class="delete">Delete</button>
-                    </div>
-                </div>
+        <!-- USER IS LOGGED IN -->
+        <div v-if="user" class="container">
+
+        </div>
+
+
+
+
+        <!-- USER IS NOT LOGGED IN -->
+        <div v-else>
+            <div class="jumbotron">
+                <h1 class="display-4">It's time for a portfolio that stays current.</h1>
+                <p class="lead">Art Database is a simple, beautiful portfolio that showcases what you're passionate about.</p>
+                <hr class="my-4">
+                <p>Tired of the chaos of Wordpress?</p>
+                <a @click="toggleForm" class="btn btn-primary btn-lg" href="#" role="button">Register Now</a>
             </div>
-        </div>-->
+
+        </div>
+
+
+
+
 
 
     </div>
