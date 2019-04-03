@@ -74,20 +74,85 @@
 
 
         <!-- USER IS LOGGED IN -->
-        <div v-if="user" class="container">
+        <div v-if="user" class="picturebox">
+            <div class="container">
+                <br>
+                <div class="row">
+                    <!-- Top Row -->
+                    <div class="col ">
+                        <input v-model="filter" class="form-control shadow p-3 mb-5 bg-white rounded" placeholder="filter..." type="text">
+                    </div>
+                    <div class="col-auto">
+                        <label class="btn btn-success shadow mb-5">
+                            Upload<input type="file" style="display: none;" multiple>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE SHOWCASE -->
+            <div class="card-columns">
+                <div class="card">
+                    <img src="./test-images/1.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/2.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/3.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/5.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/6.jpeg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/7.jpeg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/8.jpeg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/9.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/10.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/11.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/12.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/13.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./test-images/14.jpg" class="card-img-top" alt="...">
+                </div>
+
+            </div>
+            <!--/IMAGE SHOWCASE-->
+
+
+
 
         </div>
 
 
 
 
-        <!-- USER IS NOT LOGGED IN -->
+        <!-- USER NOT LOGGED IN -->
         <div v-else>
             <div class="jumbotron">
-                <h1 class="display-4">It's time for a portfolio that stays current.</h1>
-                <p class="lead">Art Database is a simple, beautiful portfolio that showcases what you're passionate about.</p>
+                <h1 class="display-4">A portfolio that stays current.</h1>
+                <p class="lead">We were frustrated with fiddling around in HTML instead of actually making art. Art Database is a simple portfolio that lets you catalog your passion, while ignoring the code :)</p>
                 <hr class="my-4">
-                <p>Tired of the chaos of Wordpress?</p>
+                <p>Tired of worrying about Wordpress when you'd rather be making art?</p>
                 <a @click="toggleForm" class="btn btn-primary btn-lg" href="#" role="button">Register Now</a>
             </div>
 
